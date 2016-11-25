@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <title>Resume</title>
+</head>
+<body>
+  <div class="container" ng-controller="AppCtrl">
+
+    <h1>Gabriel Garcia</h1>
+    <h1>Resume</h1>
+
+    <table>
+      <thead>
+        <tr>
+
+        </tr>
+      </thead>
+      <tbody>
+      <div class="edu">
+        <th> Education </th>
+        <tr ng-repeat="edu in resume">
+          <td>{{edu.education}}</td>
+          <!-- <td>{{edu.degree}}</td>
+          <td>{{edu.year}}</td> -->
+
+
+
+        </tr>
+      </div>
+      </tbody>
+    </table>
+
+    <br>
+
+
+
+    <table>
+      <thead>
+        <tr>
+
+        </tr>
+      </thead>
+      <tbody>
+      <div class="skills">
+        <th> Skills </th>
+        <tr ng-repeat="skills in resume">
+          <td>{{skills.skill}}</td>
+
+
+        </tr>
+      </div>
+      </tbody>
+    </table>
+    <br>
+
+    <table>
+      <thead>
+        <tr>
+
+        </tr>
+      </thead>
+      <tbody>
+      <div class="projects">
+        <th> Projects </th>
+        <tr ng-repeat="projects in resume">
+          <td>{{projects.projects}}</td>
+
+
+        </tr>
+      </div>
+      </tbody>
+    </table>
+
+
+
+
+
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
+</body>
+</html>
