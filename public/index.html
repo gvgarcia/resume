@@ -11,25 +11,26 @@
 
   <title>Resume</title>
 </head>
-<body style="font-color:blue;">
+<body style="background-color:lavender;">
   <div class="container" ng-controller="AppCtrl">
 
     <h1>Gabriel Garcia</h1>
     <h1>Resume</h1>
 
     <table>
-      <thead>
-        <tr>
 
-        </tr>
-      </thead>
-      <tbody style="background-color:lavender;">
+      <tbody style="background-color:white;">
+
+
       <div class="edu">
-        <th> Education </th>
+       <font size="20" color="white">
+         <th> Education </th>
+       </font>
         <tr ng-repeat="edu in resume">
           <td>{{edu.education}}</td>
 
         </tr>
+        </font>
       </div>
       </tbody>
     </table>
@@ -71,9 +72,6 @@
       </div>
       </tbody>
     </table>
-
-
-
 
 
   </div>
