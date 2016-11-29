@@ -14,20 +14,30 @@
 <body style="background-color:lavender;">
   <div class="container" ng-controller="AppCtrl">
 
-    <h1>Gabriel Garcia</h1>
+  <center>  <h1>Gabriel Garcia</h1>
     <h1>Resume</h1>
+  </center>
+    <h1>Education</h1>
 
-    <table>
+
+    <table class="table">
 
       <tbody style="background-color:white;">
 
 
       <div class="edu">
        <font size="20" color="white">
-         <th> Education </th>
+         <th> School </th>
+         <th> Degree </th>
+         <th> Last Year </th>
+
+
        </font>
-        <tr ng-repeat="edu in resume">
-          <td>{{edu.education}}</td>
+        <tr ng-repeat="edu in resume| filter :{'type':'edu'}">
+          <td>{{edu.School}}</td>
+          <td>{{edu.Degree}}</td>
+          <td>{{edu.Last_Year}}</td>
+
 
         </tr>
         </font>
@@ -37,7 +47,7 @@
 
     <br>
 
-    <table>
+    <table class="table">
       <thead>
         <tr>
 
@@ -45,8 +55,9 @@
       </thead>
       <tbody style="background-color:lavenderblush;">
       <div class="skills">
-        <th> Skills </th>
-        <tr ng-repeat="skills in resume">
+        <h1>Skills</h1>
+
+        <tr ng-repeat="skills in resume| filter :{'type':'skill'}">
           <td>{{skills.skill}}</td>
 
 
@@ -56,7 +67,7 @@
     </table>
     <br>
 
-    <table>
+    <table class="table">
       <thead>
         <tr>
 
@@ -64,9 +75,15 @@
       </thead>
       <tbody style="background-color:yellow;">
       <div class="projects">
-        <th> Projects </th>
-        <tr ng-repeat="projects in resume">
-          <td>{{projects.projects}}</td>
+        <h1>Projects</h1>
+
+        <th> Title </th>
+        <th> Description </th>
+
+        <tr ng-repeat="projects in resume| filter :{'type':'project'}">
+          <td>{{projects.Title}}</td>
+          <td>{{projects.Description}}</td>
+
 
         </tr>
       </div>
